@@ -5,7 +5,6 @@ const fs = require('fs');
 const app = express();
 
 app.get('/random', async (req, res, next) => {
-  }
 
   const path = [
     "https://vt.tiktok.com/ZSF5w7AwF/",
