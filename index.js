@@ -5,6 +5,11 @@ const fs = require('fs');
 const app = express();
 
 app.get('/random', async (req, res, next) => {
+   let { apikey } = req.query;
+
+  if (!apikey || apikey !== 'trungdz') {
+    return res.json({ result: 'Lấy apikey liên hệ admin' });
+  }
 
   const path = [
     "https://vt.tiktok.com/ZSF5w7AwF/",
